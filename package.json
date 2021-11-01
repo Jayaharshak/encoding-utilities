@@ -1,5 +1,5 @@
 {
-  "name": "encoding-utilities",
+  "name": "ts-encoding-utilities",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -17,7 +17,7 @@
     "dist"
   ],
   "keywords": [],
-  "author": "Jay Kandimalla",
+  "author": "jkandimalla",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.0.2",
