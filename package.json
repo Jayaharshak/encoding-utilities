@@ -1,0 +1,46 @@
+{
+  "name": "encoding-utilities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "prepare": "tsc",
+    "test": "jest",
+    "test:unit": "jest -t=unit --coverage",
+    "lint": "tslint --config ./tslint.json --project ./tsconfig.json --fix",
+    "precommit": "concurrently \"npm run lint\" \"npm run test\""
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [],
+  "author": "Jay Kandimalla",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.0.2",
+    "concurrently": "^6.3.0",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.2",
+    "tslint": "^5.20.1",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  },
+  "jest": {
+    "testURL": "http://localhost/",
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
+  }
+}
